@@ -7,9 +7,15 @@ const dataBaseMail = ['me@gmail.com' , 'you@gmail.com', 'he@gmail.com']
 dataBaseMail.push(mailInput)
 // console.log (dataBaseMail)
 // per ogni email (for) devo controllare se esiste (if) altrimenti (else) aggiungo all array l email
-for (let i=0;  i<dataBaseMail.length; i++ ){
-    if (!dataBaseMail[i] === mailInput){
-        dataBaseMail.push(mailInput)
-        console.log(dataBaseMail)
+
+let emailCeck = false;
+for (let i = 0; i < dataBaseMail.length; i++) {
+    if (dataBaseMail[i] === mailInput) {
+        console.log('Email presente');
+    }else{
+        console.log('Email non trovata');
+        dataBaseMail.push(mailInput);
+        console.log('Email agigunta alla lista ');
     }
-}
+}    
+
